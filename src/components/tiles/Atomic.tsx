@@ -84,7 +84,7 @@ const TileBase: React.FC<InternalProps & { style?: React.CSSProperties }> = ({
       className={`relative w-full rounded-xl overflow-hidden ${shape} ${className}`}
       style={style}
     >
-      <Link href={`${tile?.link}`} className="text-xl text-primary">
+      <Link href={`${tile?.link}`} className="text-xl text-primary group">
         {/* Background color fallback */}
         {tile?.cor && (
           <div
@@ -103,6 +103,9 @@ const TileBase: React.FC<InternalProps & { style?: React.CSSProperties }> = ({
             unoptimized
           />
         )}
+
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
         {/* Rótulo */}
         {tileLabel &&
