@@ -23,14 +23,11 @@ export default async function Page({
     params: Promise<{ slug: string }>;
 }) {
     const post = await client.fetch<SanityDocument>(POST_QUERY, await params, options);
-
-    console.log("post", post);
     const postImageUrl = post.image
         ? urlFor(post.image)?.width(550).height(310).url()
         : null;
 
-    console.log("postImageUrl", postImageUrl);
-
+ 
     return (
         <Layout>
             {/* Hero */}
@@ -59,8 +56,9 @@ export default async function Page({
 
             {/* Bloco de texto em branco */}
             <section className="bg-white px-8 md:px-20 py-20 text-brand-gray text-lg leading-relaxed rounded-b-2xl">
-                <div className="w-full mx-auto grid  lg:grid-cols-2 gap-20 text-brand-purple text-left text-[22px]">
-                    <SimplePortableText value={post.body} />                    
+                {/* <div className="w-full mx-auto grid  lg:grid-cols-2 gap-20 text-brand-purple text-left text-[22px]"> */}
+                <div className={`w-full mx-auto grid ${post.columns ? `lg:grid-cols-${post.columns}` : 'grid-cols-1'} gap-20 text-brand-purple text-left text-[22px]`}>
+                    <SimplePortableText value={post.body}  />
                 </div>
             </section>
 

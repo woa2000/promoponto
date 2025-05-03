@@ -10,5 +10,6 @@ export interface TileData {
     url?: string; // opcional, caso queira acessar direto
   } | null;
   cor?: string;
+  tipoLink?: string;  
   link?: string;
 }

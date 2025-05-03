@@ -32,8 +32,6 @@ export default async function Cases() {
     };
   });
 
-  console.log("Tiles fetched from Sanity:", tiles);
-
   return (
     <Layout>
       <CasesGrid tiles={tiles} />

@@ -84,7 +84,12 @@ const TileBase: React.FC<InternalProps & { style?: React.CSSProperties }> = ({
       className={`relative w-full rounded-xl overflow-hidden ${shape} ${className}`}
       style={style}
     >
-      <Link href={`${tile?.link}`} className="text-xl text-primary group">
+      <Link href={`${tile?.link}`} 
+        className="text-xl text-primary group"
+        {...(tile?.tipoLink === "externo"
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {})}
+      >
         {/* Background color fallback */}
         {tile?.cor && (
           <div

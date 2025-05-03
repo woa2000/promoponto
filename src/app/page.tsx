@@ -16,6 +16,7 @@ const POSTS_QUERY = `*[_type == "tiles"]{
     }
   },
   tipoTiles,
+  tipoLink,
   link
 }`;
 
@@ -29,7 +30,8 @@ export default async function Home() {
     titulo: doc.title,
     imagem: doc.image || null,
     cor: doc.cor,
-    link: doc.slug?.current ? `/tiles/${doc.slug.current}` : "#",
+    tipoLink: doc.tipoLink,
+    link: doc.link ? doc.link : "#",
     type: doc.tipoTiles,
   }));
 

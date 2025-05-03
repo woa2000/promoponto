@@ -18,12 +18,12 @@ export default function Header() {
     ['Nossos Cases', '/cases'],
     ['Notícias e Tendências', '/noticias'],
     ['Entre em Contato', '/contato'],
-    ['Política de Privacidade', '/politica-de-privacidade'],
+    ['Política de Privacidade', '/page/a/politica-de-privacidade'],
   ];
 
   return (
     <>
-      <header className="bg-transparent">
+      <header className="fixed top-0 w-full z-50 bg-brand-background">
         <div className="container mx-auto flex items-center justify-between px-4 py-4">
           <Link href="/">
             <Image
