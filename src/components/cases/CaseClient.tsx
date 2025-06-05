@@ -63,7 +63,7 @@ export default function CaseClient({ post, postImageUrl }: CaseClientProps) {
 
       {/* Galeria de imagens */}
       {Array.isArray(post.galeria) && post.galeria.length > 0 && (
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <section className="grid grid-cols-1 md:grid-cols-2">
           {post.galeria.map((item: GalleryItem, idx: number) => {
             // Verificar se o item tem uma imagem válida
             if (!item.image) return null;
@@ -85,7 +85,7 @@ export default function CaseClient({ post, postImageUrl }: CaseClientProps) {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
                 {item.descricao && (
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm p-2 rounded-b-xl">
+                  <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm p-2">
                     {item.descricao}
                   </div>
                 )}
