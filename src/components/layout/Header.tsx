@@ -23,7 +23,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 w-full z-50 bg-brand-background">
+      <header className="fixed top-0 w-full z-50">
         <div className="container mx-auto flex items-center justify-between px-4 py-4">
           <Link href="/">
             <Image

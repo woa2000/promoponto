@@ -35,7 +35,7 @@ export default function Footer() {
             <div className="text-left flex flex-col">
               <p className="text-base font-medium">Contato direto ao ponto.</p>
               <a
-                href="tel:+5511973596836"
+                href="https://wa.me/5511973596836"
                 className="mt-1 text-4xl font-bold md:font-extrabold tracking-tight text-brand-700 md:text-5xl"
               >
                 11&nbsp;97359.6836
@@ -45,12 +45,12 @@ export default function Footer() {
               {/* Ícones sociais */}
               <ul className="flex gap-4">
                 <SocialLink
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/promoponto"
                   label="LinkedIn"
                   icon={<Linkedin size={20} />}
                 />
                 <SocialLink
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/promoponto/"
                   label="Instagram"
                   icon={<Instagram size={20} />}
                 />

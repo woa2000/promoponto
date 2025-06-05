@@ -56,7 +56,6 @@ export default async function Page({
 
             {/* Bloco de texto em branco */}
             <section className="bg-white px-8 md:px-20 py-20 text-brand-gray text-lg leading-relaxed rounded-b-2xl">
-                {/* <div className="w-full mx-auto grid  lg:grid-cols-2 gap-20 text-brand-purple text-left text-[22px]"> */}
                 <div className={`w-full mx-auto grid ${post.columns ? `lg:grid-cols-${post.columns}` : 'grid-cols-1'} gap-20 text-brand-purple text-left text-[22px]`}>
                     <SimplePortableText value={post.body}  />
                 </div>
@@ -70,12 +69,12 @@ export default async function Page({
                         <div className="flex flex-wrap justify-center gap-12">
                             {[
                                 ["Design de Imobiliário", "Da exposição de produto a exposição de marca.", "/images/icons/ico1.svg"],
-                                ["MPDV & Retail Intelligence", "Da entradano canal até o contato com produto.", "/images/icons/ico2.svg"],
+                                ["MPDV & Retail Intelligence", "Da entrada no canal até o contato com produto.", "/images/icons/ico2.svg"],
                                 ["Ativação de Marca & Vendas", "Da degustação a recreação com o shopper.", "/images/icons/ico3.svg"],
-                                ["Promoção", "Do gatilhode compra ao impactonas vendas.", "/images/icons/ico4.svg"],
-                                ["Estande, Convenção & Eventos", "Dos negóciose engajamento, indo até o entretenimento.", "/images/icons/ico5.svg"],
+                                ["Promoção", "Do gatilho de compra ao impacto nas vendas.", "/images/icons/ico4.svg"],
+                                ["Estande, Convenção & Eventos", "Dos negócios e engajamento, indo até o entretenimento.", "/images/icons/ico5.svg"],
                                 ["Ferramenta de Vendas", "Do argumento de vendas a proposta de valor do produto.", "/images/icons/ico6.svg"],
-                                ["Trade Digital", "Dos canais sociais aoe-commerce.", "/images/icons/ico7.svg"],
+                                ["Trade Digital", "Dos canais sociais ao e-commerce.", "/images/icons/ico7.svg"],
                             ].map(([label, description, icon]) => (
                                 <ServiceIcon key={label} label={label} icon={icon} description={description} />
                             ))}
