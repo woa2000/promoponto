@@ -15,11 +15,24 @@ const urlFor = (source: SanityImageSource) =>
 
 const options = { next: { revalidate: 30 } };
 
-export default async function PageServerComponent({
-    params,
-}: {
-    params: { slug: string };
-}) {
+export default async function PageServerComponent(props: any) {
+    // Handle params safely regardless of their structure
+    let slug: string;
+    
+    if (!props || !props.params) {
+      throw new Error("Missing params in page props");
+    }
+    
+    const params = props.params;
+    if (params instanceof Promise) {
+      const resolvedParams = await params;
+      slug = resolvedParams.slug;
+    } else if (typeof params === 'object' && params !== null) {
+      slug = params.slug;
+    } else {
+      throw new Error("Invalid params structure");
+    }
+
     const post = await client.fetch<SanityDocument & {
       title: string;
       subTitle?: string;
@@ -27,7 +40,7 @@ export default async function PageServerComponent({
       columns?: number;
       body: any;
       showService?: boolean;
-    }>(POST_QUERY, { slug: params.slug }, options);
+    }>(POST_QUERY, { slug }, options);
     
     const postImageUrl = post.image
         ? urlFor(post.image)?.width(550).height(310).url()
