@@ -64,26 +64,28 @@ export default function CaseClient({ post, postImageUrl }: CaseClientProps) {
 
       {/* Galeria de imagens */}
       {Array.isArray(post.galeria) && post.galeria.length > 0 && (
-        <section className="grid grid-cols-1 md:grid-cols-2">
+        <section className="grid grid-cols-1 md:grid-cols-1">
           {post.galeria.map((item: GalleryItem, idx: number) => {
             // Verificar se o item tem uma imagem válida
             if (!item.image) return null;
 
-            const imageUrl = urlFor(item.image)?.width(800).height(600).url();
+            // Modificado para usar a proporção 1920 x 1080
+            const imageUrl = urlFor(item.image)?.width(1920).height(1080).url();
             
             if (!imageUrl) return null;
 
             return (
               <div
                 key={item._key}
-                className="relative w-full aspect-[4/3] overflow-hidden shadow-md"
+                className="relative w-full aspect-[16/9] overflow-hidden shadow-md rounded-lg"
               >
                 <Image
                   src={imageUrl}
                   alt={item.descricao || `Imagem ${idx + 1}`}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 80vw"
+                  quality={90}
                 />
                 {item.descricao && (
                   <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white text-sm p-2">
