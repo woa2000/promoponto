@@ -77,7 +77,7 @@ export default function CaseClient({ post, postImageUrl }: CaseClientProps) {
             return (
               <div
                 key={item._key}
-                className="relative w-full aspect-[16/9] overflow-hidden shadow-md rounded-lg"
+                className="relative w-full aspect-[16/9] overflow-hidden shadow-md"
               >
                 <Image
                   src={imageUrl}
