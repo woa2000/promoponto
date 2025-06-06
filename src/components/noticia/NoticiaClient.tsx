@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { SanityDocument } from 'next-sanity';
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
 import SimplePortableText from '@/components/ui/SimplePortableText';
@@ -66,7 +67,7 @@ export default function NoticiaClient({ post, postImageUrl }: NoticiaClientProps
 
       {/* Botão de voltar para a página noticias */}
       <section className="flex justify-center py-10">
-        <a 
+        <Link 
           href="/noticias" 
           className="flex items-center justify-center w-16 h-16 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-300"
           aria-label="Voltar para notícia"
@@ -85,7 +86,7 @@ export default function NoticiaClient({ post, postImageUrl }: NoticiaClientProps
             >
               <path d="m15 18-6-6 6-6" />
             </svg>
-        </a>
+        </Link>
       </section>
     </>
   );
