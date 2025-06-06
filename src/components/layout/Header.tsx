@@ -14,7 +14,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   const links: [string, string][] = [
-    ['Conheça a Agência', '/page/a/sobre'],
+    ['Conheça a Agência', '/page/a/conheca-a-agencia'],
     ['Nossos Cases', '/cases'],
     ['Notícias e Tendências', '/noticias'],
     ['Entre em Contato', '/contato'],

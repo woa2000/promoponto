@@ -87,9 +87,10 @@ export default function ContatoPage() {
                 required
               >
                 <option value="">Selecione uma opção</option>
-                <option value="servicos">Serviços</option>
-                <option value="orçamento">Solicitar orçamento</option>
-                <option value="outros">Outros</option>
+                <option value="ser-cliente">Ser cliente</option>
+                <option value="ser-fornecedor">Ser fornecedor</option>
+                <option value="ser-colaborador">Ser colaborador</option>
+                <option value="outros-assuntos">Outros assuntos</option>
               </select>
             </div>
 

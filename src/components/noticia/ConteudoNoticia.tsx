@@ -18,27 +18,28 @@ export default function ConteudoNoticia({ reading, post }: ConteudoNoticiaProps)
   return (
     <>
       {/* Hero */}
-      <section className="bg-white text-left px-8 md:px-20 py-10 rounded-t-2xl">
-        <div className="flex justify-end items-center gap-4">
-          <button>
+      <section className="bg-white text-left px-8 md:px-10 py-10 rounded-t-2xl">
+        <div className="flex justify-end items-center">
+            <button className="p-1 hover:bg-gray-100 rounded-full transition-colors">
             <Image
               src="/images/icons/share.svg"
               alt="Share"
-              width={24}
-              height={24}
+              width={36}
+              height={36}
             />
-          </button>
-          <Link
+            </button>
+            <Link
             key={post.slug.current}
             href={`/noticias/${post.slug.current}/${reading ? 'full' : 'read'}`}
-          >
+            className="p-1 hover:bg-gray-100 rounded-full transition-colors"
+            >
             <Image
-              src="/images/icons/extend.svg"
-              alt="Extend"
-              width={24}
-              height={24}
+              src={reading ?   "/images/icons/collapse.svg" : "/images/icons/extend.svg"}
+              alt={reading ? "Collapse" : "Extend"}
+              width={36}
+              height={36}
             />
-          </Link>
+            </Link>
         </div>
         <div className="w-full">
           <h1 className="text-brand-purple font-bold text-[clamp(36px,6vw,48px)] leading-[52px] mb-3 mt-3">

@@ -13,7 +13,7 @@ export default function Footer() {
         {/* —— Menu (1/3) —— */}
         <nav className="space-y-3 text-lg font-medium leading-relaxed md:w-1/3 text-left flex flex-col">
           {([
-            ["Conheça a Agência", "/agencia"],
+            ["Conheça a Agência", "/page/a/conheca-a-agencia"],
             ["Nossos Cases", "/cases"],
             ["Notícias e Tendências", "/noticias"],
             ["Entre em Contato", "/contato"],
