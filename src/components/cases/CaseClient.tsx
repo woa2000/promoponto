@@ -50,7 +50,7 @@ export default function CaseClient({ post, postImageUrl }: CaseClientProps) {
         </div>
       </section>
 
-      {postImageUrl && (
+      {/* {postImageUrl && (
         <section className="relative min-h-[600px] w-full">
           <Image
             src={postImageUrl}
@@ -59,8 +59,8 @@ export default function CaseClient({ post, postImageUrl }: CaseClientProps) {
             style={{ objectFit: 'cover' }}
             priority
           />
-        </section>
-      )}
+        </section> 
+      )}*/}
 
       {/* Galeria de imagens */}
       {Array.isArray(post.galeria) && post.galeria.length > 0 && (
