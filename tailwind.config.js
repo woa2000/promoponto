@@ -13,7 +13,7 @@ module.exports = {
       colors: {
         white: '#FFFFFF', 
         brand: {
-          background: '#D3D2D1',                   
+          background: '#D3D2D1',                 
           purple: '#957BB4',
           lilac:  '#B0ADD8',
           lime:   '#C5E04C',

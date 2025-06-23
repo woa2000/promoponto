@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <>
       <header className="fixed top-0 w-full z-50">
-        <div className="container mx-auto flex items-center justify-between px-4 py-4">
+        <div className="container mx-auto flex items-center justify-between px-4 py-4 bg-brand-background">
           <Link href="/">
             <Image
               src="/logo-promo-ponto.png"
